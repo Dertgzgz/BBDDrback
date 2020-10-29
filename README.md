@@ -8,4 +8,4 @@ Genera un esquema base para la autenticacion Rbac
 3. ``` mvn liquibase:update ```
 
 ## Esquema
-
+![](rbac.png)
