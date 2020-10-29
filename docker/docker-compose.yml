@@ -1,0 +1,20 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:latest
+    volumes:
+       - rback-data:/var/lib/mysql/data
+  # Si queremos persistir los datos
+    # volumes:
+    #   - type: bind
+    #     source: c:/home/gte2/postgresql
+    #     target: /var/lib/postgresql/data
+     
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
+volumes:
+  rback-data:
